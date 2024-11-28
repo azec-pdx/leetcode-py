@@ -47,7 +47,7 @@ There are many ways how tests can be run, depending on what scope is targeted. B
   The above should output:
   ```txt
   test_isSubsequence (test_p392.TestSolution.test_isSubsequence) ... ok
-  test_isSubsequence_edgeCases (test_p392.TestSolution.test_isSubsequence_edgeCases) ... ok
+  test_isSubsequence_edge_cases (test_p392.TestSolution.test_isSubsequence_edge_cases) ... ok
   
   ----------------------------------------------------------------------
   Ran 2 tests in 0.000s
@@ -92,3 +92,14 @@ To run all tests from VS Code:
   ![test-results-tab](img/test-results-tab.png)
 - On the left menu-bar there is also an icon for tests. Click on it to see all available options for all discovered tests and to filter through them.
   ![tests-discovered](img/tests-discovered.png)
+
+
+## Math expressions rendering
+
+Some problems use Latex expressionsin their description. GitHub [supports math expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) in its own markdown spec, and for rerendering it is using [MathJax](https://www.mathjax.org/) library.
+To allow local rendering of markdown files with problem descriptions, one option on VS Code is to use [Markdown Enhanced Plugin](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) and [configure](https://shd101wyy.github.io/markdown-preview-enhanced/#/usages?id=vs-code) VS Code plugin setting `markdown-preview-enhanced.mathRenderingOption` to use `MathJax` as default rendering option. So either in global `settings.json` or workspace-specific `settings.json`, you would configure:
+```json
+"markdown-preview-enhanced": {
+    "mathRenderingOption": "MathJax"
+}
+```
