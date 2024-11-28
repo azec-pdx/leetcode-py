@@ -21,12 +21,12 @@ There are many ways how tests can be run, depending on what scope is targeted. B
 
 ### From the console
 
-**NOTE:** Base starting directory for running all unittest commands in CLI should always be `{projectRoot}/problems` directory.
+**NOTE:** Base starting directory for running all unittest commands in CLI should always be `{repo_root}/problems` directory.
 
 - To run all tests, run following:
   
   ```bash
-  cd leetcode/problems #problems dir
+  cd leetcode-py/problems #problems dir
   python -m unittest discover -v -s test
   ```
 
@@ -65,7 +65,7 @@ There are many ways how tests can be run, depending on what scope is targeted. B
 
 ### From the VS Code
 
-Configure `{project-root}/.vscode/settings.json` with the following:
+Configure `{repo_root}/.vscode/settings.json` with the following:
 
 ```json
 {
@@ -85,7 +85,7 @@ Configure `{project-root}/.vscode/settings.json` with the following:
 
 
 To run all tests from VS Code:
-- Assume that you opened repo root directory in VS Code (`leetcode-py` is `${workspaceFolder}` and opened in VS Code).
+- Assume that you opened repo root directory `{repo_root}` in VS Code (this would be `leetcode-py` if you didn't use different name when cloning the repo with git). In other words, `{repo_root}` should match `${workspaceFolder}` (in VS Code workspace settings) and opened in VS Code as top-level directory.
 - Right click `problems` directory in VS Code.
 - Run command: `Run All Tests`.
 - On the bottom of VS Code window, there should be a panel with test results and output.
