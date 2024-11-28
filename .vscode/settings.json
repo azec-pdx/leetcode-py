@@ -10,4 +10,5 @@
         "-p",
         "*test*.py"
     ],
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax"
 }
