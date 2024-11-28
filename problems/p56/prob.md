@@ -1,4 +1,4 @@
-# 55. Merge intervals
+# 56. Merge intervals
 
 Given an array of `intervals` where 
 ```math
