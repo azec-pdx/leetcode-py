@@ -16,6 +16,6 @@ Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge all
 
 **Constraints:**
 
-- _1 <= intervals.length <= $`10^4`$_
+- 1 <= intervals.length <= $10^4$
 - `intervals[i].length == 2`
 - `0 <= start$$_{i}$$ <= end$$_{i}$$ <= 10$$_{4}$$`
