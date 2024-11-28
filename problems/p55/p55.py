@@ -1,4 +1,3 @@
-import os
 import sys
 
 sys.path.append("..")  # allows importing everything from utils

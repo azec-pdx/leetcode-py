@@ -96,8 +96,8 @@ To run all tests from VS Code:
 
 ## Math expressions rendering
 
-Some problems use Latex expressionsin their description. GitHub [supports math expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) in its own markdown spec, and for rerendering it is using [MathJax](https://www.mathjax.org/) library.
-To allow local rendering of markdown files with problem descriptions, one option on VS Code is to use [Markdown Enhanced Plugin](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) and [configure](https://shd101wyy.github.io/markdown-preview-enhanced/#/usages?id=vs-code) VS Code plugin setting `markdown-preview-enhanced.mathRenderingOption` to use `MathJax` as default rendering option. So either in global `settings.json` or workspace-specific `settings.json`, you would configure:
+Some problems use Latex for math expressions in their description. GitHub [supports math expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) in its own markdown spec and uses [MathJax](https://www.mathjax.org/) library for rerendering.
+To allow rendering of MathJax expressions in markdown locally, one option on VS Code is to use [Markdown Enhanced Plugin](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) and [configure](https://shd101wyy.github.io/markdown-preview-enhanced/#/usages?id=vs-code) VS Code plugin setting `markdown-preview-enhanced.mathRenderingOption` to use `MathJax` as default rendering option. So either in global `settings.json` or workspace-specific `settings.json`, you would configure:
 ```json
 "markdown-preview-enhanced": {
     "mathRenderingOption": "MathJax"
