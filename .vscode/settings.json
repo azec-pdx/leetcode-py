@@ -1,0 +1,14 @@
+{
+    "python.testing.pytestEnabled": false,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.unittestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./problems/test",
+        "-p",
+        "*test*.py"
+    ],
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax"
+}
