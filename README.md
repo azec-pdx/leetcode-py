@@ -13,38 +13,69 @@ Inside each specific problem directory there are following files:
 
 ## Running tests
 
-There are two ways to run all tests for any particular problem.
+There are many ways how tests can be run, depending on what scope is targeted. Below are just some of the examples.
 
-### From the repo root level
+### From the console
 
-To run all tests for `p392`, run following:
+- To run all tests for `p392`, run following:
 
-```bash
-cd leetcode-py # project root
-python -m unittest discover -s problems/p392
+  ```bash
+  cd leetcode-py/problems # problems dir
+  python -m unittest discover -v -s test -p "*392*.py"
+  ```
+  The above should output:
+  ```txt
+  test_isSubsequence (test_p392.TestSolution.test_isSubsequence) ... ok
+  test_isSubsequence_edgeCases (test_p392.TestSolution.test_isSubsequence_edgeCases) ... ok
+  
+  ----------------------------------------------------------------------
+  Ran 2 tests in 0.000s
+
+  OK
+  ```
+
+- To run specific test method for `p392`, run following:
+
+  ```bash
+  cd leetcode-py/problems # problems dir
+  python -m unittest discover -v -s test -p "*392*.py" -k "isSubsequence"
+  ```
+ 
+
+- To run just edge case tests for all problems, run following:
+
+    
+  ```bash
+  cd leetcode-py/problems # problems dir
+  python -m unittest discover -v -s test -k "edge"
+  ```
+
+### From the VS Code
+
+Configure `{project-root}/.vscode/settings.json` with the following:
+
+```json
+{
+    "python.testing.pytestEnabled": false,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.unittestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./problems/test",
+        "-p",
+        "*test*.py"
+    ],
+}
 ```
 
-To run specific methods from problem `p392` test suite:
 
-```bash
-cd leetcode-py #project root
-# This will match only test_isSubsequence() method from TestSolution class in test_p392.py
-python -m unittest -k "test_isSubsequence" discover -s problems/p392
-```
-
-
-### From a problem directory
-
-To run all tests for `p392`, run following:
-
-```bash
-cd leetcode-py/problems/p392 # problem dir
-python -m unittest
-```
-
-To run specific methods from problem `p392` test suite:
-```bash
-cd leetcode-py/problems/p392 # problem dir
-# This will run only test_isSubsequence() method from TestSolution class in test_p392.py
-python -m unittest test_p392.TestSolution.test_isSubsequence
-```
+To run all tests from VS Code:
+- Assume that you opened repo root directory in VS Code (`leetcode-py` is `${workspaceFolder}` and opened in VS Code).
+- Right click `problems` directory in VS Code.
+- Run command: `Run All Tests`.
+- On the bottom of VS Code window, there should be a panel with test results and output.
+  ![test-results-tab](img/test-results-tab.png)
+- On the left menu-bar there is also an icon for tests. Click on it to see all available options for all discovered tests and to filter through them.
+  ![tests-discovered](img/tests-discovered.png)

@@ -1,7 +1,7 @@
 import string
 import unittest
 
-from p392 import Solution
+from p392.p392 import Solution
 
 
 class TestSolution(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestSolution(unittest.TestCase):
         self.assertTrue(solution.isSubsequence("abc", "ahbgdc"))
         self.assertFalse(solution.isSubsequence("axc", "ahbgdc"))
 
-    def test_isSubsequence_edgeCases(self):
+    def test_edgeCases(self):
         solution = Solution()
         self.assertTrue(solution.isSubsequence("", "x"))
         self.assertFalse(solution.isSubsequence("x", ""))
