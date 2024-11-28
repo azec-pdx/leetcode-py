@@ -1,14 +1,18 @@
 # leetcode-py
+
 Practice and solutions of Leetcode problems in Python
 
 
-## Organization
+## Naming and problems organization
 
-The top-level container for all solutions is `problems` directory. Each problem has its own subdirectory which matches `pXXX` format, where `XXX` are the digits representing problem number on Leetcode. For example `problems/p392` contains solution and tests for [P392](https://leetcode.com/problems/is-subsequence/description/).
+The top-level container for all problems is `problems` directory. Each problem has its own subdirectory which matches `pXXX` format, where `XXX` are the digits representing problem number on Leetcode. For example `problems/p392` contains solution for [P392](https://leetcode.com/problems/is-subsequence/description/).
+Inside each specific problem directory there are two files:
+- `pXXX.py`: contains a solution to the problem
+- `prob.md`: contains a description of the problem
 
-Inside each specific problem directory there are following files:
-- `pXXX.py`: contains a solution to the problem.
-- `test_pXXX.py`: contains unit tests for the solution.
+Due to the challenges with `unittest` discovery in VS Code:
+- top level container for all tests (for all problems) is `problems/test` directory
+- inside `problems/test` directory, all tests for specific problem `pXXX` are inside `problems/test/test_pXXX.py`
 
 
 ## Running tests
@@ -16,6 +20,23 @@ Inside each specific problem directory there are following files:
 There are many ways how tests can be run, depending on what scope is targeted. Below are just some of the examples.
 
 ### From the console
+
+**NOTE:** Base starting directory for running all unittest commands in CLI should always be `{projectRoot}/problems` directory.
+
+- To run all tests, run following:
+  
+  ```bash
+  cd leetcode/problems #problems dir
+  python -m unittest discover -v -s test
+  ```
+
+- To run just edge case tests for all problems, run following:
+
+    
+  ```bash
+  cd leetcode-py/problems # problems dir
+  python -m unittest discover -v -s test -k "edge"
+  ```
 
 - To run all tests for `p392`, run following:
 
@@ -34,21 +55,13 @@ There are many ways how tests can be run, depending on what scope is targeted. B
   OK
   ```
 
-- To run specific test method for `p392`, run following:
+- To run specific test for `p392`, run following:
 
   ```bash
   cd leetcode-py/problems # problems dir
   python -m unittest discover -v -s test -p "*392*.py" -k "isSubsequence"
   ```
- 
 
-- To run just edge case tests for all problems, run following:
-
-    
-  ```bash
-  cd leetcode-py/problems # problems dir
-  python -m unittest discover -v -s test -k "edge"
-  ```
 
 ### From the VS Code
 
