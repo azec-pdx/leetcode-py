@@ -18,10 +18,10 @@ class Solution:
         max_area = 0
         lim = 0
         while i < j:
-            if min(height[i], height[j]) >= lim:
-                current_area = (j - i) * min(height[i], height[j])
-                max_area = max(current_area, max_area)
-                lim = min(height[i], height[j])
+            if (h := min(height[i], height[j])) > lim:
+                if (current_area := (j - i) * h) > max_area:
+                    max_area = current_area
+                lim = h
 
             if height[i] <= height[j]:
                 i += 1
