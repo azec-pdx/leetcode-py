@@ -32,7 +32,5 @@ class TestSolution(unittest.TestCase):
         i4 = [1, 2, 3]
         t4 = 5
         e4 = [1, 2]
-
         s4 = s.twoSum(i4, t4)
-
         self.assertEqual(sorted(e4), sorted(s4), "Lists should be equal")
