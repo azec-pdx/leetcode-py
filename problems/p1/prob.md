@@ -1,5 +1,6 @@
-# 1. Two Sum (elements unsorted)
+# 1. Two Sum (Input Array Not Sorted)
 
+**Topics:** `Array`, `HashMap`
 
 Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
 
