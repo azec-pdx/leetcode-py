@@ -1,5 +1,7 @@
 # 56. Merge intervals
 
+**Topics:** `Array`, `Sorting`
+
 Given an array of `intervals` where 
 ```math
 intervals[i] = [{start}_i, {end}_i]
