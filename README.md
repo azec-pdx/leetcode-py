@@ -70,16 +70,18 @@ Configure `{repo_root}/.vscode/settings.json` with the following:
 ```json
 {
     "python.testing.pytestEnabled": false,
-    "python.testing.autoTestDiscoverOnSaveEnabled": true,
-    "python.testing.cwd": "${workspaceFolder}",
     "python.testing.unittestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}/problems/",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./problems/test",
+        "./test",
         "-p",
         "*test*.py"
     ],
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+    "python-envs.defaultEnvManager": "ms-python.python:pyenv"
 }
 ```
 
@@ -103,3 +105,8 @@ To allow rendering of MathJax expressions in markdown locally, one option on VS 
     "mathRenderingOption": "MathJax"
 }
 ```
+
+## Abstract Data Types (ADTs)
+
+Some ADTs are defined in directory `<project_root>/adts` and can be used in problems code.
+One such example is doubly linked list.

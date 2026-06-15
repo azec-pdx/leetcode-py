@@ -2,11 +2,11 @@
     "python.testing.pytestEnabled": false,
     "python.testing.unittestEnabled": true,
     "python.testing.autoTestDiscoverOnSaveEnabled": true,
-    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.cwd": "${workspaceFolder}/problems/",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./problems/test",
+        "./test",
         "-p",
         "*test*.py"
     ],
