@@ -1,8 +1,9 @@
 from doubly_linked_base import _DoublyLinkedBase
 from ex import Empty
 
+
 class LinkedDeque(_DoublyLinkedBase):
-    """ Implementation of deque using doubly linked list ADT """
+    """Implementation of deque using doubly linked list ADT"""
 
     def first(self):
         """Peek at the front/left of the deque. Return first element but don't remove it"""
