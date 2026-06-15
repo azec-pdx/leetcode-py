@@ -11,8 +11,8 @@ Inside each specific problem directory there are two files:
 - `prob.md`: contains a description of the problem
 
 Due to the challenges with `unittest` discovery in VS Code:
-- top level container for all tests (for all problems) is `problems/test` directory
-- inside `problems/test` directory, all tests for specific problem `pXXX` are inside `problems/test/test_pXXX.py`
+- top level container for all tests (all problems) is `problems/test` directory
+- all tests for individual problem `pXXX` are inside `problems/test/test_pXXX.py` (each problem gets it's own test file)
 
 
 ## Running tests

@@ -1,0 +1,15 @@
+import sys
+
+sys.path.append("..")  # allows importing everything from utils and adts
+
+from adts.list_node import ListNode
+
+
+class Solution:
+    def deleteNode(self, node: ListNode):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        node.val = node.next.val
+        node.next = node.next.next
