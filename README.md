@@ -103,3 +103,8 @@ To allow rendering of MathJax expressions in markdown locally, one option on VS 
     "mathRenderingOption": "MathJax"
 }
 ```
+
+## Abstract Data Types (ADTs)
+
+Some ADTs are defined in directory `<project_root>/adts` and can be used in problems code.
+One such example is doubly linked list.
